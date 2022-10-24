@@ -9,7 +9,7 @@ app.secret_key = 'I Understand Databases'
 
 def get_db_connection():
 
-    result = urlparse(os.environ['postgres://sitkyuueihvvxt:cbc6f97866ae15a1f8fc822d360df053d503c8f33379cd2ae12009453c4f72f3@ec2-52-70-45-163.compute-1.amazonaws.com:5432/dadb705p8kqern'])
+    result = urlparse(os.environ['DATABASE_URL'])
     username = result.username
     password = result.password
     database = result.path[1:]
